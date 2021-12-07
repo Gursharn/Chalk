@@ -1,0 +1,124 @@
+html, body{
+    margin: 0;
+    padding: 0;
+  
+    
+  }
+  body{
+    background-color: aliceblue;
+  
+  }
+  .head{
+      text-align: Center;
+      background: rgb(101, 104, 255);
+      color: black;
+      padding-top: 20px;
+      padding-bottom: 5px;
+      background-size: cover;  
+  }
+  nav{
+      padding:10px;
+      margin: 10px;
+      height: auto;
+      float: right;
+      position: relative;
+  
+  }
+  /* Style the links inside the navigation bar */
+  nav .Homebutton{
+    background: rgb(0, 0, 0);
+    border-radius: 999px;
+    box-shadow: #5e5df0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    border: 0;
+  }
+  nav a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+  }
+  .flags{
+    position: relative;
+    float: right;
+    
+  }
+  .head-img{
+    background-image: url("../img/Kingscollege.jpeg");
+    min-height: 380px;
+  /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  /* Needed to position the navbar */
+    position: relative;
+  }
+  .joinbtnn{
+    position: relative;
+    display: inline-block;
+    background-color: rgb(32, 70, 177);
+    color: white;
+    border-radius: 25px;
+  
+  }
+  #CourseListStudent{
+    text-align: center;
+    list-style-position: inside;
+  }
+  
+  .MyCourse{
+    text-align: center;
+  }
+  
+  /* Dropdown Button */
+  .dropbtn {
+    background-color: rgb(32, 70, 177);
+    color: white;
+    padding: 10px;
+    font-size: 10px;
+    border-radius: 999px;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(17, 61, 207, 0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: aliceblue;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #0e0d0d;}
