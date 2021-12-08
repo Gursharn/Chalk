@@ -2,6 +2,7 @@ require('dotenv').config();
 import mysql from "mysql2";
 
 let connection = mysql.createConnection({
+    connectionLimit: 1000,
     host: process.env.DB_HOST,
     user: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,

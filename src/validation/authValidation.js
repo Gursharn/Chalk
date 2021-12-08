@@ -12,6 +12,7 @@ let validateRegister = [
     })
 ];
 
+
 let validateLogin = [
     check("email", "Invalid email").isEmail().trim(),
 
