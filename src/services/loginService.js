@@ -40,11 +40,48 @@ let findUserByEmail = (email) => {
     });
 };
 
+let findInstructorByEmail = (email) => {
+    return new Promise((resolve, reject) => {
+        try {
+            DBConnection.query(
+                ' SELECT * FROM `instructors` WHERE `email` = ?  ', email,
+                function(err, rows) {
+                    if (err) {
+                        reject(err)
+                    }
+                    let user = rows[0];
+                    resolve(user);
+                }
+            );
+        } catch (err) {
+            reject(err);
+        }
+    });
+};
+
 let findUserById = (id) => {
     return new Promise((resolve, reject) => {
         try {
             DBConnection.query(
                 ' SELECT * FROM `students` WHERE `id` = ?  ', id,
+                function(err, rows) {
+                    if (err) {
+                        reject(err)
+                    }
+                    let user = rows[0];
+                    resolve(user);
+                }
+            );
+        } catch (err) {
+            reject(err);
+        }
+    });
+};
+let findInstructorById = (id) => {
+    return new Promise((resolve, reject) => {
+        try {
+            DBConnection.query(
+                ' SELECT * FROM `instructors` WHERE `id` = ?  ', id,
                 function(err, rows) {
                     if (err) {
                         reject(err)
@@ -78,6 +115,8 @@ let comparePassword = (password, userObject) => {
 module.exports = {
     handleLogin: handleLogin,
     findUserByEmail: findUserByEmail,
+    findInstructorByEmail: findInstructorByEmail,
     findUserById: findUserById,
+    findInstructorById: findInstructorById,
     comparePassword: comparePassword
 };

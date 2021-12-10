@@ -6,7 +6,11 @@ let getPageLogin = (req, res) => {
         errors: req.flash("errors")
     });
 };
-
+let getLoginInstructor = (req, res) => {
+    return res.render("instructorLogin.ejs", {
+        error: req.flash("errors")
+    });
+};
 let checkLoginValid = async (req, res) => {
     let errorsArr = [];
     let validationErrors = validationResult(req);
@@ -48,10 +52,63 @@ let postLogOut = (req, res) => {
     });
 };
 
+// INSTRUCTOR NOW
+
+let checkInstructorValid = async (req, res) => {
+    let errorsArray = [];
+    let validationError = validationResult(req);
+    if (!validationError.isEmpty()) {
+        let error = Object.values(validationError.mapped());
+        error.forEach((item) => {
+            errorsArray.push(item.msg);
+        });
+        req.flash("errors", errorsArray);
+        return res.redirect("/instructorLogin");
+    }
+
+    try {
+        await loginService.checkInstructorValid(req.body.email, req.body.password);
+        return res.redirect("/");
+    } catch (err) {
+        req.flash("errors", err);
+        return res.redirect("/instructorLogin");
+    }
+};
+
+let checkInstructorLogin = (req, res, next) => {
+    if (!req.isAuthenticated()) {
+        return res.redirect("/instructorLogin");
+    }
+    next();
+};
+
+let checkInstructorLogOut = (req, res, next) => {
+    if (req.isAuthenticated()) {
+        return res.redirect("/instructorLogin");
+    }
+    next();
+};
+
+let instructorPostLogOut = (req, res) => {
+    req.session.destroy(function(err) {
+        return res.redirect("/instructorLogin");
+    });
+};
+
+
+
+
+
 module.exports = {
     getPageLogin: getPageLogin,
     checkLoginValid: checkLoginValid,
     checkLogin: checkLogin,
     checkLogOut: checkLogOut,
-    postLogOut: postLogOut
+    postLogOut: postLogOut,
+
+    checkInstructorValid: checkInstructorValid,
+    checkInstructorLogin: checkInstructorLogin,
+    checkInstructorLogOut: checkInstructorLogOut,
+    instructorPostLogOut: instructorPostLogOut,
+    getLoginInstructor: getLoginInstructor
 };

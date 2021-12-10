@@ -12,6 +12,7 @@ let createNewInstructor = (dataa) => {
     } else {
       // hash password
       let salt = bcrypt.genSaltSync(10);
+      
       let instructorItem = {
         firstName: dataa.firstName,
         lastName: dataa.lastName,

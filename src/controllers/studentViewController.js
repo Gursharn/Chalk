@@ -5,6 +5,15 @@ let getStudentPage = (req, res) => {
     });
 };
 
+let getInstructorPage = (req, res) => {
+    return res.render("instructorHome.ejs", {
+        errors: req.flash("errors"),
+        user: req.user
+    });
+};
+
+
 module.exports = {
     getStudentPage: getStudentPage,
+    getInstructorPage: getInstructorPage
 };

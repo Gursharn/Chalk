@@ -4,7 +4,7 @@ import loginService from "../services/loginService";
 
 let LocalStrategy = passportLocal.Strategy;
 
-let initialPassportLocal = () => {
+let initPassportLocal = () => {
     passport.use(new LocalStrategy({
             usernameField: 'email',
             passwordField: 'password',
@@ -12,7 +12,7 @@ let initialPassportLocal = () => {
         },
         async (req, email, password, done) => {
             try {
-                await loginService.findInstructorByEmail(email).then(async (user) => {
+                await loginService.findUserbyEmail(email).then(async (user) => {
                     if (!user) {
                         return done(null, false, req.flash("errors", `This user email "${email}" doesn't exist`));
                     } // if user doesnt exist display error
@@ -40,11 +40,11 @@ passport.serializeUser((user, done) => {
 });
 
 passport.deserializeUser((id, done) => {
-    loginService.findInstructorById(id).then((user) => {
+    loginService.findUserbyId(id).then((user) => {
         return done(null, user);
     }).catch(error => {
         return done(error, null)
     });
 });
 
-module.exports = initialPassportLocal;
+module.exports = initPassportLocal;

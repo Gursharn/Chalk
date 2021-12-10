@@ -17,7 +17,7 @@ let createNewInstructor = async (req, res) => {
       errorsArr.push(item.msg);
     });
     req.flash("errors", errorsArr);
-    return res.redirect("/register");
+    return res.redirect("/instructorRegister");
   }
 
   //create a new user
@@ -33,7 +33,7 @@ let createNewInstructor = async (req, res) => {
     return res.redirect("/login");   //successful redirect them to login
   } catch (err) {
     req.flash("errors", err);
-    return res.redirect("/register");   // unsuccessful redirect them to register again
+    return res.redirect("/instructorRegister");   // unsuccessful redirect them to register again
   }
 };
 module.exports = {
