@@ -41,5 +41,3 @@ app.use(passport.session());
 // init all web routes
 initWebRoutes(app);
 
-let port = process.env.PORT || 8080;
-app.listen(port, () => console.log(`Building a login system with NodeJS is running on port ${port}!`));
