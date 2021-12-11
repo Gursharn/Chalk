@@ -1,22 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
-}
+
 html, body{
-  display: grid;
-  height: 100vh;
-  width: 100%;
-  place-items: center;
-background-color: aliceblue;
-}
+    margin: 0;
+    padding: 10px;
+  
+    
+  }
+  body{
+    background-color: aliceblue;
+  
+  }
+header{
+      text-align: Center;
+      color: black;
+      padding-top: 20px;
+      padding-bottom: 5px;
+      background-size: cover;  
+  }
+.Homebutton{
+      padding:10px;
+      margin: 10px;
+      height: auto;
+      float: right;
+      position: relative;
+  
+  }
+nav .Homebutton{
+    background: rgb(0, 0, 0);
+    border-radius: 999px;
+    box-shadow: #5e5df0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    border: 0;
+  }
+
+  
 ::selection{
   background: #ff80bf;
 
 }
+.btnn{
+    position: relative;
+    display: inline-block;
+    background-color: rgb(32, 70, 177);
+    color: white;
+    border-radius: 25px;
+  
+  }
 .container{
   background: #fff;
   max-width: 350px;

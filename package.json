@@ -17,6 +17,7 @@
     "express-validator": "^6.13.0",
     "heroku": "^7.59.2",
     "mysql2": "^2.3.3",
+    "nodebb-plugin-import-vbulletin": "^0.1.8",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0"
   },

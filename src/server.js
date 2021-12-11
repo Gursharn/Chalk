@@ -1,3 +1,4 @@
+const mySecret = process.env['DB_CONNECTION']
 require("dotenv").config();
 import express from "express";
 import configViewEngine from "./configs/viewEngine";

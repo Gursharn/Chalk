@@ -1,0 +1,69 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: aliceblue;
+}
+
+.name {
+  text-align: center;
+}
+
+.topnav{
+  text-align: center;
+}
+.logo1{
+  float: left;
+
+
+}
+.logo2{
+  float: right;
+
+}
+#context-body{
+  padding: 20px;
+
+}
+
+.home-button {
+  background: black;
+  border-radius: 999px;
+  box-shadow: #5e5df0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  border: 0;
+}
+
+.course-materials,
+.assignments,
+.discussion,
+.grades,
+.roster,
+.announcement,
+.content {
+  flex-direction: column;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 6px;
+  color: #fff;
+  background: linear-gradient(180deg, darkblue 0%, darkblue 100%);
+  background-origin: border-box;
+  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25),
+  inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+
+  display: inline-block;
+}
+
+.logo {
+  position: relative;
+}

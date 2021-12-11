@@ -1,0 +1,75 @@
+html, body{
+    margin: 0;
+    padding: 10px;
+    
+  }
+  body{
+    background-color: aliceblue;
+  }
+  .head{
+    text-align: center;
+  }
+  nav .Homebutton{
+    background: rgb(0, 0, 0);
+    border-radius: 999px;
+    box-shadow: #5e5df0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    border: 0;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: rgb(18, 121, 238);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgb(221, 221, 221);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .accept{
+    position: relative;
+    display: inline-block;
+    background-color: rgb(32, 70, 177);
+    color: white;
+    border-radius: 25px;
+
+  }
+  h6{
+    line-height: 1px;
+  }
