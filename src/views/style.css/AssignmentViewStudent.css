@@ -1,0 +1,78 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  
+}
+body{
+  background-color: aliceblue;
+
+
+}
+.header{
+  text-align: Center;
+  
+}
+.nav{
+    padding:10px;
+    margin: 10px;
+    height: auto;
+}
+/* Style the links inside the navigation bar */
+nav .Homebutton{
+  background: rgb(0, 0, 0);
+  border-radius: 999px;
+  box-shadow: #5e5df0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  border: 0;
+}
+nav a{
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  
+
+}
+h1{
+  text-align: center;
+}
+header{
+    display: flex;
+    align-items: center;
+
+}
+header p{
+  padding: 30px;
+
+}
+#question{
+  margin: 20px;
+  padding: 20px;
+  
+}
+div form{
+  padding: 30px;
+  
+}
+#submit{
+  position: absolute;
+  left: 400px;
+}
+.save-button {
+  position: relative;
+  display: inline-block;
+  background-color: rgb(32, 70, 177);
+  color: white;
+  border-radius: 25px;
+}
+
