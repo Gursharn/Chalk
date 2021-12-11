@@ -50,26 +50,6 @@ Gagandeep Singh: In this assignemt D1: I made the the wireframes for home, stude
 Gursharn Singh: In Deliverable 1, I made the Instructor aspect of the web application along with the sign up and login page.
 
 # Deliverable 1 Html 
-## Home page 
-<img src="https://github.com/Gagandeep1051/Chalkboard/blob/main/png%20file/Screen%20Shot%202021-10-25%20at%2010.44.42%20PM.png">
-<img src="https://github.com/Gagandeep1051/Chalkboard/blob/main/png%20file/Screen%20Shot%202021-10-25%20at%2010.44.52%20PM.png">
-<img src="https://github.com/Gagandeep1051/Chalkboard/blob/main/png%20file/Screen%20Shot%202021-10-25%20at%2010.44.59%20PM.png">
-
-## Student view<br>
-
-<img src="https://github.com/Gagandeep1051/Chalkboard/blob/main/png%20file/Screen%20Shot%202021-11-01%20at%209.24.31%20AM.png">
-
-## Assignment view <br>
-<img src="https://github.com/Gagandeep1051/Chalkboard/blob/main/png%20file/Screen%20Shot%202021-11-01%20at%209.27.59%20AM.png">
-
-## Course View Student <br>
-<img src="https://github.com/Gagandeep1051/Chalkboard/blob/main/png%20file/Screen%20Shot%202021-11-01%20at%209.29.24%20AM.png">
-
-## Admin view <br>
-<img src="https://github.com/Gagandeep1051/Chalkboard/blob/main/png%20file/AdminView.png">
-
-## Roster View <br>
-<img src="https://github.com/Gagandeep1051/Chalkboard/blob/main/png%20file/roaster.png">
 
 ## Instructor Home View <br>
 <img width="1252" alt="Screen Shot 2021-11-03 at 12 16 31 AM" src="https://user-images.githubusercontent.com/42221223/140009373-43414417-9f38-485c-9cad-bca42b4278c6.png">
