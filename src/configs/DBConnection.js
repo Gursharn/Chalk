@@ -1,4 +1,4 @@
-const mySecret = process.env['DB_HOST']
+const mySecret = process.env['DB_CONNECTION']
 require('dotenv').config();
 import mysql from "mysql2";
 
@@ -11,9 +11,11 @@ let connection = mysql.createPool({
     //socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock'
 });
 
+
 connection.getConnection(function(err) {
     if (err) throw err;
     console.log("Database connected!");
 });
+
 
 module.exports = connection;

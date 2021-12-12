@@ -13,11 +13,7 @@ let router = express.Router();
 
 let initWebRoutes = (app) => {
   router.get("/studentView", studentViewController.getStudentPage);
-  router.get(
-    "/",
-    loginController.checkLogin,
-    studentViewController.getStudentPage
-  );
+  router.get("/", loginController.checkLogin, studentViewController.getStudentPage);
   router.get(
     "/login",
     loginController.checkLogOut,

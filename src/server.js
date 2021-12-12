@@ -1,4 +1,6 @@
 const mySecret = process.env['DB_CONNECTION']
+const createError = require('http-errors');
+const flash = require('express-flash');
 require("dotenv").config();
 import express from "express";
 import configViewEngine from "./configs/viewEngine";
@@ -30,6 +32,7 @@ app.use(
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "/views")));
+
 
 //Config view engine
 configViewEngine(app);
