@@ -2,9 +2,8 @@
 # Website Link, Deliverable 2
 <a href = "https://Chalk-1.gagandeepsingh9.repl.co"> Chalkboard Home Page
  ## Individual contributions <br>
- Gagandeep Singh: Worked on CSS for admin view and all student related pages, I learned how to make the spacing for the website really nice as well as apply the css selectors we have been learning. <br>
-Gursharn Singh: Worked on css for Roster view and all instructor related pages, I learned how to make a website responsive using bootstrap.
- 
+ Gagandeep Singh: Me and my partner both worked collaboratily to make the database and work on the user auth and validations for the sign up process.  <br>
+Gursharn Singh: Me and my partner both worked collaboratily to make the database and work on the user auth and validations for the sign up process <br>
 ## Home Page
  <img width="1435" alt="Screen Shot 2021-11-19 at 11 20 21 PM" src="https://user-images.githubusercontent.com/42221223/142714173-ef412b29-0fbe-4957-857b-2eed97a77cf9.png">
 
