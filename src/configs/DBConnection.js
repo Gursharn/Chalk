@@ -8,6 +8,8 @@ let connection = mysql.createPool({
     user: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
+        port:3306,
+
     //socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock'
 });
 
