@@ -5,6 +5,11 @@ require("dotenv").config();
 import express from "express";
 import configViewEngine from "./configs/viewEngine";
 import initWebRoutes from "./routes/web";
+
+
+import router from "./configs/users";
+var usersRouter = require('./configs/users');
+
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import session from "express-session";
@@ -15,6 +20,7 @@ let app = express();
 
 //use cookie parser
 app.use(cookieParser("secret"));
+
 
 //config session
 app.use(
@@ -32,6 +38,9 @@ app.use(
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "/views")));
+
+app.use('/users', usersRouter);
+
 
 
 //Config view engine

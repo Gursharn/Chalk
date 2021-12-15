@@ -13,13 +13,19 @@ let router = express.Router();
 
 let initWebRoutes = (app) => {
   router.get("/studentView", studentViewController.getStudentPage);
-  //router.get("/Admin.html", adminViewController.getStudentPage);
   router.get("/", loginController.checkLogin, studentViewController.getStudentPage);
   router.get(
     "/login",
     loginController.checkLogOut,
     loginController.getPageLogin
   );
+router.get("/user-list", studentViewController.adminPage);
+//router.get("/login", studentViewController.getLogin);
+
+
+
+
+
   router.post(
     "/login",
     passport.authenticate("local", {

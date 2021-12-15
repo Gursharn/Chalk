@@ -4,9 +4,21 @@ let getStudentPage = (req, res) => {
         user: req.user
     });
 };
+// let getLogin = (req, res) => {
+//     return res.render("login.ejs", {
+//         errors: req.flash("errors"),
+//         user: req.user
+//     });
+// };
 
 let getInstructorPage = (req, res) => {
     return res.render("instructorHome.ejs", {
+        errors: req.flash("errors"),
+        user: req.user
+    });
+};
+let adminPage = (req, res) => {
+    return res.render("user-list.ejs", {
         errors: req.flash("errors"),
         user: req.user
     });
@@ -15,5 +27,7 @@ let getInstructorPage = (req, res) => {
 
 module.exports = {
     getStudentPage: getStudentPage,
-    getInstructorPage: getInstructorPage
+    getInstructorPage: getInstructorPage,
+    adminPage:adminPage,
+    //getLogin:getLogin
 };
