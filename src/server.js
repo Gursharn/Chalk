@@ -5,10 +5,10 @@ require("dotenv").config();
 import express from "express";
 import configViewEngine from "./configs/viewEngine";
 import initWebRoutes from "./routes/web";
+import connection from "./configs/DBConnection";
 
-
-import router from "./configs/users";
-var usersRouter = require('./configs/users');
+//import router from "./configs/users";
+//var usersRouter = require('./configs/users');
 
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
@@ -39,9 +39,28 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "/views")));
 
-app.use('/users', usersRouter);
+//app.use('/users', usersRouter);
+app.get('/StudentDB', function(request, response){
+    console.log('GET request received at DB') 
+    connection.query("SELECT * FROM Students", function (err, result) {
+        if (err) throw err;
+        else{
+            response.send(result)
+        }
 
+    });
+});
 
+app.get('/instructorDB', function(request, response){
+    console.log('GET request received at DB') 
+    connection.query("SELECT * FROM instructors", function (err, result) {
+        if (err) throw err;
+        else{
+            response.send(result)
+        }
+
+    });
+});
 
 //Config view engine
 configViewEngine(app);

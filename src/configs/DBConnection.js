@@ -13,6 +13,10 @@ let connection = mysql.createPool({
     //socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock'
 });
 
+connection.query('SELECT * from students', (err, res) =>{
+  //return console.log(res);
+})
+
 
 connection.getConnection(function(err) {
     if (err) throw err;
