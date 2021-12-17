@@ -51,6 +51,8 @@ app.get('/StudentDB', function(request, response){
     });
 });
 
+// connection.query("SELECT `EMAIL` AND `PASSWORD` FROM `INSTRUCTORS` WHERE EMAIL = 'jason@gmail.com' and password = 'jason123'" );
+
 app.get('/instructorDB', function(request, response){
     console.log('GET request received at DB') 
     connection.query("SELECT * FROM instructors", function (err, result) {

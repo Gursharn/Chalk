@@ -28,6 +28,7 @@ router.get("/user-list", studentViewController.adminPage);
 
   router.post(
     "/login",
+    loginController.adminStudent,
     passport.authenticate("local", {
       successRedirect: "/studentView", //successful login, redirect to student home page
       failureRedirect: "/login", // failes to login, redirect back to login again
@@ -55,6 +56,7 @@ router.get("/user-list", studentViewController.adminPage);
   );
   router.post(
     "/instructorLogin",
+    loginController.admin,
     passport.authenticate("local", {
       successRedirect: "/instructorHome", //successful login, redirect to student home page
       failureRedirect: "/instructorLogin", // failes to login, redirect back to login again
@@ -71,6 +73,7 @@ router.get("/user-list", studentViewController.adminPage);
   );
 
   router.post("/instructorLogout", loginController.instructorPostLogOut);
+
 
   return app.use("/", router);
 };

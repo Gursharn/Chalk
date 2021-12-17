@@ -52,6 +52,18 @@ let postLogOut = (req, res) => {
     });
 };
 
+let admin = (req, res) => {
+    if(req.body.email === "adminInstructor@gmail.com" && req.body.password ==="123"){
+      return res.redirect("/instructordb"); 
+    }
+};
+
+let adminStudent = (req, res) => {
+    if(req.body.email === "adminStudent@gmail.com" && req.body.password ==="123"){
+      return res.redirect("/studentdb"); 
+    }
+};
+
 // INSTRUCTOR NOW
 
 let checkInstructorValid = async (req, res) => {
@@ -105,7 +117,8 @@ module.exports = {
     checkLogin: checkLogin,
     checkLogOut: checkLogOut,
     postLogOut: postLogOut,
-
+    admin: admin,
+    adminStudent: adminStudent,
     checkInstructorValid: checkInstructorValid,
     checkInstructorLogin: checkInstructorLogin,
     checkInstructorLogOut: checkInstructorLogOut,

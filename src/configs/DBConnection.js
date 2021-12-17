@@ -4,10 +4,10 @@ import mysql from "mysql2";
 
 let connection = mysql.createPool({
     connectionLimit: 1000,
-    host: process.env.DB_HOST,
-    user: process.env.DB_USERNAME,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
+    host: "us-cdbr-east-04.cleardb.com",
+    user: "b639341eea92bc",
+    password: "7845fa861b0ac4d",
+    database: "heroku_231b2a006cf47df",
         port:3306,
 
     //socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock'
