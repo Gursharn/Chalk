@@ -63,6 +63,15 @@ let adminStudent = (req, res) => {
       return res.redirect("/studentdb"); 
     }
 };
+let session = (req, res) => {
+    var session;
+    session=req.session;
+    if(session.userid){
+        res.redirect("/instructorHome")
+    }else
+    res.sendFile("/login");
+
+};
 
 // INSTRUCTOR NOW
 
@@ -118,6 +127,7 @@ module.exports = {
     checkLogOut: checkLogOut,
     postLogOut: postLogOut,
     admin: admin,
+    session: session,
     adminStudent: adminStudent,
     checkInstructorValid: checkInstructorValid,
     checkInstructorLogin: checkInstructorLogin,

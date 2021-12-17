@@ -45,9 +45,10 @@ router.get("/user-list", studentViewController.adminPage);
   );
   router.post("/logout", loginController.postLogOut);
   router.get("/instructorHome", studentViewController.getInstructorPage);
-
+  
   router.get("/instructorHome", studentViewController.getInstructorPage);
   router.get(
+    
     "/instructorLogin",
     loginController.getLoginInstructor,
     loginController.checkInstructorLogin,
