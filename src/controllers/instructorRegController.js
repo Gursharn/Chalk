@@ -36,7 +36,9 @@ let createNewInstructor = async (req, res) => {
     return res.redirect("/instructorRegister");   // unsuccessful redirect them to register again
   }
 };
+
+
 module.exports = {
-getInstructorReg: getInstructorReg,
-createNewInstructor: createNewInstructor
+  getInstructorReg: getInstructorReg,
+  createNewInstructor: createNewInstructor
 };

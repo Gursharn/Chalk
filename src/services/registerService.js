@@ -56,6 +56,8 @@ let checkExistEmail = (email) => {
     }
   });
 };
+
+
 module.exports = {
   createNewUser: createNewUser,
 };

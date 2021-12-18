@@ -57,6 +57,8 @@ let checkExistEmail = (email) => {
     }
   });
 };
+
+
 module.exports = {
     createNewInstructor: createNewInstructor,
 };
