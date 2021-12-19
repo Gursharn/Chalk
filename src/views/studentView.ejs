@@ -24,6 +24,7 @@
            <button onclick="window.location.href='#ListCourse'" class="Homebutton">Available Courses</button>
            <form method="POST" action="/logout">
             <button type="submit" class="Homebutton">Log out</button>
+            
         </form>
         </nav>
        
@@ -36,39 +37,40 @@
 
 </header>
 <!--                                            list of courses available-->
+<a href="/Coursedb.html">class</a>
+<a href="/searchview">search view</a>
+
 <div id="CourseListStudent">
   <h3 id="ListCourse">List of Available courses</h3>
-    <label>
-        <input type="text" placeholder="Search course name">
-    </label>
 
-            <h6> C++  CS100</h6>
-            <div>
-                <i>Professor name</i>
-                <i>Class time</i>
-            </div>
-            <button class="joinbtnn">Join</button>
-            <h6> Java CS200</h6>
-            <div>
-                <i>Professor name</i>
-                <i>Class time</i>
-            </div>
-            <button class="joinbtnn">Join</button>
+    <form method="POST" action = "/" novalidate >
+        <input type="search" name="search" placeholder="Search course name">
+        <button type="submit">search</button>
+    </form>
+          <tr>
+            <th scope = "col">#ID</th>
+            <th scope = "col">Course Name</th>
+            <th scope = "col">Instructor Name </th>
+            <th scope = "col">Description</th>
+            <th scope = "col"> semester </th>
+            <th scope = "col"> course number </th>
+            <th scope = "col"> Start time </th>
+            <th scope = "col"> end time </th>
+            <th scope = "col"> days of week </th>
+          </tr>
+          {{#each rows}}
 
-            <h6>Pyton CS300</h6>
-            <div>
-                <i>Professor name</i>
-                <i>Class time</i>
-            </div>
-            <button class="joinbtnn" >Join</button>
+          <tr>
+            <th scope = "row">1</th>
+            <td scope = "row">1</th>
 
-            <h6>Internet and Web CS355</h6>
-            <div>
-                <i>Professor name</i>
-                <i>Class time</i>
-            </div>
-            <button class="joinbtnn">Join</button>
+          </tr>
+          {{/each}}
 
+            
+            
+            
+      
 </div>
 <hr>
 

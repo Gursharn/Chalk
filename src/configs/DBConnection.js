@@ -13,9 +13,33 @@ let connection = mysql.createPool({
     //socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock'
 });
 
-connection.query('SELECT * from students', (err, res) =>{
+connection.query('SELECT * from courses', (err, res) =>{
   //return console.log(res);
 })
+
+//find course
+// exports.search = (req,res) =>{
+//   connection.getConnection((err, connection) => {
+//     if(err) throw err;
+//     console.log("connected to coursedb");
+
+//     let searchterm = req.body.search;
+
+//     connection.query('SELECT * from  courses WHERE courseName LIKE ?', ['%' + searchterm + '%'], (err, row) =>{
+//         connection.release();
+//         console.log(searchterm);
+//         if(!err){
+//           res.render('searchview', {row });
+//         }else { 
+//           console.log(err);
+//         }
+//         console.log("data from course db: \n", row);
+//     });
+
+    
+//   });
+
+// }
 
 
 connection.getConnection(function(err) {

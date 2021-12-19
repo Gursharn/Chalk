@@ -1,7 +1,6 @@
 import express from "express";
 import registerController from "../controllers/registerController";
 import loginController from "../controllers/loginController";
-
 import studentViewController from "../controllers/studentViewController";
 import instructorRegController from "../controllers/instructorRegController";
 import auth from "../validation/authValidation";
@@ -12,6 +11,7 @@ import connection from "../configs/DBConnection";
 import course from "../services/courseCreateService";
 initialPassportLocal();
 initPassportLocal();
+const Connection = require("../configs/DBConnection");
 let router = express.Router();
 
 let initWebRoutes = (app) => {
@@ -26,8 +26,8 @@ let initWebRoutes = (app) => {
   //router.get("/login", studentViewController.getLogin);
 
 
-
-
+  //find course
+  router.post("/studentview.html", function(req, res){ Connection.find  });
 
   router.post(
     "/login",

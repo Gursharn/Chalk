@@ -34,14 +34,27 @@ app.use(
   })
 );
 
+app.get('/searchview', function(req, res) {
+    connection.query('SELECT * FROM courses WHERE courseName LIKE "%' + req.query.term + '%"',
+    function(err, rows, fields) {
+        if (err) throw err;
+        var data = [];
+        for ( let i = 0; i < rows.length; i++) {
+            data.push(rows[i].courseName);
+          }
+          res.end(JSON.stringify(data));
+      });
+});
+
 // Enable body parser post data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "/views")));
 
+
 //app.use('/users', usersRouter);
 app.get('/StudentDB', function(request, response){
-    console.log('GET request received at DB') 
+    console.log('GET request received at StudentDB') 
     connection.query("SELECT * FROM Students", function (err, result) {
         if (err) throw err;
         else{
@@ -50,11 +63,21 @@ app.get('/StudentDB', function(request, response){
 
     });
 });
+app.get('/Coursedb', function(request, response){
+    console.log('GET request received at courseDB') 
+    connection.query("SELECT * FROM courses", function (err, result) {
+        if (err) throw err;
+        else{
+            response.json(result);
+        }
+
+    });
+});
 
 // connection.query("SELECT `EMAIL` AND `PASSWORD` FROM `INSTRUCTORS` WHERE EMAIL = 'jason@gmail.com' and password = 'jason123'" );
 
 app.get('/instructorDB', function(request, response){
-    console.log('GET request received at DB') 
+    console.log('GET request received at InstructorDB') 
     connection.query("SELECT * FROM instructors", function (err, result) {
         if (err) throw err;
         else{
@@ -63,6 +86,8 @@ app.get('/instructorDB', function(request, response){
 
     });
 });
+
+//app.use(connection.find);
 
 //Config view engine
 configViewEngine(app);

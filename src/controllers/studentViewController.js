@@ -23,11 +23,17 @@ let adminPage = (req, res) => {
         user: req.user
     });
 };
-
+// let searchPage = (req, res) => {
+//     return res.render("searchview.html", {
+//         errors: req.flash("errors"),
+//         user: req.user
+//     });
+// };
 
 module.exports = {
     getStudentPage: getStudentPage,
     getInstructorPage: getInstructorPage,
     adminPage:adminPage,
+    //searchPage:searchPage,
     //getLogin:getLogin
 };
