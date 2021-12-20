@@ -16,7 +16,6 @@ let connection = mysql.createPool({
 connection.query('SELECT * from courses', (err, res) =>{
   //return console.log(res);
 })
-
 //find course
 // exports.search = (req,res) =>{
 //   connection.getConnection((err, connection) => {
