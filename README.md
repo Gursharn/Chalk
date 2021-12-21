@@ -2,8 +2,8 @@
 # Website Link, Deliverable 2
 <a href = "https://Chalk-1.gagandeepsingh9.repl.co"> Chalkboard Home Page
  ## Individual contributions <br>
- Gagandeep Singh: Me and my partner both worked collaboratily to make the database and work on the user auth and validations for the sign up process.  <br>
-Gursharn Singh: Me and my partner both worked collaboratily to make the database and work on the user auth and validations for the sign up process <br>
+ Gagandeep Singh: Me and my partner both worked collaboratily on the, creating the course, deleting a course, and showing all the avaible classes.   <br>
+Gursharn Singh: Me and my partner both worked collaboratily on the, creating the course, deleting a course, and showing all the avaible classes.   <br>
 ## Home Page
  <img width="1435" alt="Screen Shot 2021-11-19 at 11 20 21 PM" src="https://user-images.githubusercontent.com/42221223/142714173-ef412b29-0fbe-4957-857b-2eed97a77cf9.png">
 
