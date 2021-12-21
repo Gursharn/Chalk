@@ -21,9 +21,11 @@
         <nav>
             <button onclick="window.location.href='#MyClass'" class="Homebutton">My courses</button>
             <button onclick="window.location.href='#announcement'" class="Homebutton">Announcement</button>
-            <form action="/availableCourses">
+
+            <form action="/availableStudentCourses">
             <button type="submit" class="Homebutton">Courses Available</button>
         </form>
+
            <form method="POST" action="/logout">
             <button type="submit" class="Homebutton">Log out</button>
         </form>
@@ -42,6 +44,7 @@
   <h3 id="ListCourse">List of Available courses</h3>
     <label>
         <input type="text" placeholder="Search course name">
+        <a href= "/Searchbar.html">Search Here</a>
     </label>
 
             <h6> C++  CS100</h6>
