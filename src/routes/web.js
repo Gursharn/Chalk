@@ -95,6 +95,7 @@ let initWebRoutes = (app) => {
 }
 function search(req, res ){
       var courseName = req.query.courseName;
+      var courseID = req.query.courseID;
       //The user's selected courseNumber
       var courseNumber = req.query.courseNumber;
       var query = 'SELECT * FROM courses';
@@ -217,9 +218,7 @@ function fetchData3(response){
         }
         response.write("<h1>Available Courses for student </h1>");
         response.write("<a href = /studentView> Home </a>");
-        response.write('');
-        response.write('');
-        response.write('<input (keyup)=searchData($event)" type="text" class="form-control" placeholder="Search" aria-label="Searchbox" aria-describedby="basic-addon1">')
+        
         
     });
 }
