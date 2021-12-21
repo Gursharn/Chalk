@@ -172,6 +172,34 @@ app.get('/instructorDB', function(request, response){
    fetchData2(response);
    
 });
+function fetchData4(response){
+    executeQuery("SELECT * FROM Students", function(result){
+        console.log(result);
+        response.write('<table><tr>');
+        for(var column in result [0]){
+            response.write('<td><label>'+ column +'</label></td>');
+            response.write('');
+        }
+        for(var row in result){
+            response.write('<tr>');
+            for(var column in result[row]){
+                response.write('<td><label>'+ result[row][column] +'</label></td>');
+            }
+            response.write('</tr>');
+        }
+        response.write("<h1> </h1>");
+        response.write("<a href = /login> Logout </a>");
+        
+        response.end('</table>');
+        
+    });
+}
+app.get('/StudentDB', function(request, response){
+   
+   //response.render("availableCourses.ejs");
+   fetchData4(response);
+   
+});
 
 
 
