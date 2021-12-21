@@ -248,9 +248,8 @@ function fetchData3(response){
         }
         response.write("<h1>Available Courses for student </h1>");
         response.write("<a href = /studentView> Home </a>");
-        
-        
     });
+    
 }
 app.get('/availableStudentCourses', function(request, response){
    
