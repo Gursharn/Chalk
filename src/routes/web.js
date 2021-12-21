@@ -83,6 +83,8 @@ let initWebRoutes = (app) => {
   
   app.get("/deleteCourse", course.deleteCourse);
 
+   app.post("/enrollCourse", course.enrollCourse);
+
   //app.get("/Searchbar", course.search);
   
   

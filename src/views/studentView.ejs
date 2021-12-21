@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="/studentView.css">
     <title>Student View</title>
+
 </head>
 
                                         <!--heading-->
@@ -17,7 +18,7 @@
                                             
 <header>
   <div class="head-img">
-
+    <h1>Welcome </h1>
         <nav>
             <button onclick="window.location.href='#MyClass'" class="Homebutton">My courses</button>
             <button onclick="window.location.href='#announcement'" class="Homebutton">Announcement</button>
@@ -25,10 +26,12 @@
             <form action="/availableStudentCourses">
             <button type="submit" class="Homebutton">Courses Available</button>
         </form>
-
+        
            <form method="POST" action="/logout">
             <button type="submit" class="Homebutton">Log out</button>
         </form>
+
+        <a href = enrollCourse.html>   <button class="btnn">Enroll Course</button> </a>
         </nav>
        
   </div>

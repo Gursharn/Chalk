@@ -40,9 +40,32 @@ let deleteCourse = (req, res) => {
 };
 
 
+let enrollCourse = (req, res) => {
+
+  let addCourse = {
+     courseID: req.body.courseID,
+     courseNumber: req.body.courseNumber,
+      courseName: req.body.courseName,
+      email: req.body.email
+  }
+  DBConnection.query(
+    " INSERT INTO enroll set ? ",
+    addCourse,
+    function(err, results) {
+      if (err) {
+        throw err;
+      }
+      else console.log(results);
+    }
+  );
+
+  res.redirect('/studentView');
+};
+
 
 
 module.exports = {
   createCourse: createCourse,
   deleteCourse: deleteCourse,
+  enrollCourse: enrollCourse,
 };
