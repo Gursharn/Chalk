@@ -3,7 +3,7 @@ require('dotenv').config();
 import mysql from "mysql2";
 
 let connection = mysql.createPool({
-    connectionLimit: 1000,
+    connectionLimit: 10000,
     host: "us-cdbr-east-04.cleardb.com",
     user: "b639341eea92bc",
     password: "7845fa861b0ac4d",

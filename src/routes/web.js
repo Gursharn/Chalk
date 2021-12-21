@@ -266,6 +266,36 @@ app.get('/availableCourses', function(request, response){
    fetchData(response);
    
 });
+
+function fetchD(response){
+    executeQuery("SELECT * FROM enroll", function(result){
+        console.log(result);
+        response.write('<table><tr>');
+        for(var column in result [0]){
+            response.write('<td><label>'+ column +'</label></td>');
+            response.write('');
+        }
+        for(var row in result){
+            response.write('<tr>');
+            for(var column in result[row]){
+                response.write('<td><label>'+ result[row][column] +'</label></td>');
+                
+            }
+            response.write('</tr>');
+        }
+        response.write("<h1>Student Enrollment</h1>");
+        response.write("<a href = /studentView> Home </a>");
+        
+        
+    });
+}
+
+app.get('/enrollmentList', function(request, response){
+   
+   //response.render("availableCourses.ejs");
+   fetchD(response);
+   
+});
   return app.use("/", router);
 };
 
